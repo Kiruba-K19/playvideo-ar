@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" >
     <title>AR.js Video Player</title>
     <script src="aframe.min.js"></script>
     <script src="aframe-ar.js"></script>
@@ -16,19 +16,25 @@
         </a-marker>
         
         <!-- Marker A -->
-        <a-marker type="pattern" url="pattern-letterA.patt" emitevents="true" id="marker_A">
+        <a-marker type="pattern" url="pattern-letterA.patt" emitevents="true" smooth="true"
+                smoothCount="10"
+                smoothTolerance="0.01"
+                smoothThreshold="5"  id="marker_A">
             <!-- Video element -->
             <a-video id="video2" src="QTUXATHON-vidwithaud.mp4" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
         
         <!-- Marker B -->
-        <a-marker type="pattern" url="pattern-letterB.patt" emitevents="true" id="marker_B">
+        <a-marker type="pattern" url="pattern-letterB.patt" emitevents="true"  smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5" id="marker_B">
             <!-- Video element -->
             <a-video id="video3" src="QTUXATHON-vidwithaud.mp4" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
         
         <!-- Marker C -->
-        <a-marker type="pattern" url="pattern-letterC.patt" emitevents="true" id="marker_C">
+        <a-marker type="pattern" url="pattern-letterC.patt" emitevents="true" smooth="true"
+                smoothCount="10"
+                smoothTolerance="0.01"
+                smoothThreshold="5" id="marker_C">
             <!-- Video element -->
             <a-video id="video4" src="QTUXATHON-vidwithaud.mp4" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
