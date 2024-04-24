@@ -9,57 +9,53 @@
 </head>
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-	<!-- ------------------------Marker hiro--------------------- -->
+        <!-- Marker hiro -->
         <a-marker type="pattern" url="pattern-hiro.patt" emitevents="true" id="marker_hiro">
             <!-- Video element -->
             <a-video id="video1" src="introvid.mp4" width="9" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
-        <a-entity camera></a-entity>
-	<!-- ------------------------Marker hiro--------------------- -->
-	<!-- ------------------------Marker A------------------------ -->
+        
+        <!-- Marker A -->
         <a-marker type="pattern" url="pattern-letterA.patt" emitevents="true" id="marker_A">
             <!-- Video element -->
             <a-video id="video2" src="introvid.mp4" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
-        <a-entity camera></a-entity>
-	<!-- ------------------------Marker A------------------------ -->
-	<!-- ------------------------Marker B------------------------ -->
+        
+        <!-- Marker B -->
         <a-marker type="pattern" url="pattern-letterB.patt" emitevents="true" id="marker_B">
             <!-- Video element -->
-            <a-video id="video3" src="introvid" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
+            <a-video id="video3" src="introvid.mp4" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
-        <a-entity camera></a-entity>
-	<!-- ------------------------Marker B------------------------ -->
-	<!-- ------------------------Marker C------------------------ -->
+        
+        <!-- Marker C -->
         <a-marker type="pattern" url="pattern-letterC.patt" emitevents="true" id="marker_C">
             <!-- Video element -->
             <a-video id="video4" src="introvid.mp4" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
+        
         <a-entity camera></a-entity>
-	<!-- ------------------------Marker C------------------------ -->
-	
-	<!-- List of Video -->
+
         <a-assets>
             <video id="test-video" autoplay loop crossorigin="anonymous" playsinline>
                 <source src="introvid.mp4" type="video/mp4">
             </video>
-			
-			<video id="A-video" autoplay loop crossorigin="anonymous"  playsinline>
+            <video id="A-video" autoplay loop crossorigin="anonymous"  playsinline>
                 <source src="introvid.mp4" type="video/mp4">
             </video>
-			
             <video id="B-video" autoplay loop crossorigin="anonymous"  playsinline>
                 <source src="introvid.mp4" type="video/mp4">
             </video>
-			
             <video id="C-video" autoplay loop crossorigin="anonymous" playsinline>
                 <source src="introvid.mp4" type="video/mp4">
-            </video>			
+            </video>
         </a-assets>
-	<!-- List of Video -->
-	
+
         <script>
-			<!-- Marker detection hiro -->
+            var marker_hiro = document.querySelector('#marker_hiro');
+            var marker_A = document.querySelector('#marker_A');
+            var marker_B = document.querySelector('#marker_B');
+            var marker_C = document.querySelector('#marker_C');
+
             marker_hiro.addEventListener('markerFound', function () {
                 var video1 = document.querySelector('#video1');
                 video1.components.material.material.map.image.play();
@@ -69,8 +65,7 @@
                 var video1 = document.querySelector('#video1');
                 video1.components.material.material.map.image.currentTime = 0;
             });
-			<!-- Marker detection hiro -->
-			<!-- Marker detection A -->
+
             marker_A.addEventListener('markerFound', function () {
                 var video2 = document.querySelector('#video2');
                 video2.components.material.material.map.image.play();
@@ -80,8 +75,7 @@
                 var video2 = document.querySelector('#video2');
                 video2.components.material.material.map.image.currentTime = 0;
             });
-			<!-- Marker detection A -->
-			<!-- Marker detection B -->
+
             marker_B.addEventListener('markerFound', function () {
                 var video3 = document.querySelector('#video3');
                 video3.components.material.material.map.image.play();
@@ -91,8 +85,7 @@
                 var video3 = document.querySelector('#video3');
                 video3.components.material.material.map.image.currentTime = 0;
             });
-			<!-- Marker detection B -->	
-			<!-- Marker detection C -->
+
             marker_C.addEventListener('markerFound', function () {
                 var video4 = document.querySelector('#video4');
                 video4.components.material.material.map.image.play();
@@ -102,7 +95,6 @@
                 var video4 = document.querySelector('#video4');
                 video4.components.material.material.map.image.currentTime = 0;
             });
-			<!-- Marker detection C -->				
         </script>
     </a-scene>
 </body>
