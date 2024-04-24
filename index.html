@@ -4,56 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AR.js Video Player</title>
-    <script src="./library/aframe.min.js"></script>
-    <script src="./library/aframe-ar.js"></script>
+    <script src="aframe.min.js"></script>
+    <script src="aframe-ar.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
 	<!-- ------------------------Marker hiro--------------------- -->
-        <a-marker type="pattern" url="./marker/pattern-hiro.patt" emitevents="true" id="marker_hiro">
+        <a-marker type="pattern" url="pattern-hiro.patt" emitevents="true" id="marker_hiro">
             <!-- Video element -->
-            <a-video id="video1" src="#test-video" width="9" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
+            <a-video id="video1" src="introvid.mp4" width="9" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
         <a-entity camera></a-entity>
 	<!-- ------------------------Marker hiro--------------------- -->
 	<!-- ------------------------Marker A------------------------ -->
-        <a-marker type="pattern" url="./marker/pattern-letterA.patt" emitevents="true" id="marker_A">
+        <a-marker type="pattern" url="pattern-letterA.patt" emitevents="true" id="marker_A">
             <!-- Video element -->
-            <a-video id="video2" src="#A-video" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
+            <a-video id="video2" src="introvid.mp4" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
         <a-entity camera></a-entity>
 	<!-- ------------------------Marker A------------------------ -->
 	<!-- ------------------------Marker B------------------------ -->
-        <a-marker type="pattern" url="./marker/pattern-letterB.patt" emitevents="true" id="marker_B">
+        <a-marker type="pattern" url="pattern-letterB.patt" emitevents="true" id="marker_B">
             <!-- Video element -->
-            <a-video id="video3" src="#B-video" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
+            <a-video id="video3" src="introvid" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
         <a-entity camera></a-entity>
 	<!-- ------------------------Marker B------------------------ -->
 	<!-- ------------------------Marker C------------------------ -->
-        <a-marker type="pattern" url="./marker/pattern-letterC.patt" emitevents="true" id="marker_C">
+        <a-marker type="pattern" url="pattern-letterC.patt" emitevents="true" id="marker_C">
             <!-- Video element -->
-            <a-video id="video4" src="#C-video" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
+            <a-video id="video4" src="introvid.mp4" width="16" height="16" position="0 0 0" rotation="-90 0 0" scale="0.25 0.25 0.25" visible="true"></a-video>
         </a-marker>
         <a-entity camera></a-entity>
 	<!-- ------------------------Marker C------------------------ -->
 	
 	<!-- List of Video -->
         <a-assets>
-            <video id="test-video" autoplay loop crossorigin="anonymous" muted playsinline>
-                <source src="./videos/test.mp4" type="video/mp4">
+            <video id="test-video" autoplay loop crossorigin="anonymous" playsinline>
+                <source src="introvid.mp4" type="video/mp4">
             </video>
 			
-			<video id="A-video" autoplay loop crossorigin="anonymous" muted playsinline>
-                <source src="./videos/APAR_A.mp4" type="video/mp4">
+			<video id="A-video" autoplay loop crossorigin="anonymous"  playsinline>
+                <source src="introvid.mp4" type="video/mp4">
             </video>
 			
-            <video id="B-video" autoplay loop crossorigin="anonymous" muted playsinline>
-                <source src="./videos/APAR_B.mp4" type="video/mp4">
+            <video id="B-video" autoplay loop crossorigin="anonymous"  playsinline>
+                <source src="introvid.mp4" type="video/mp4">
             </video>
 			
-            <video id="C-video" autoplay loop crossorigin="anonymous" muted playsinline>
-                <source src="./videos/APAR_C.mp4" type="video/mp4">
+            <video id="C-video" autoplay loop crossorigin="anonymous" playsinline>
+                <source src="introvid.mp4" type="video/mp4">
             </video>			
         </a-assets>
 	<!-- List of Video -->
